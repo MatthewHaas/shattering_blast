@@ -22,5 +22,5 @@ module load ncbi_blast+
 for i in $(cat shattering_fasta_list.txt)
 do
 STEM=$(echo ${i} | cut -f 1 -d ".")
-blastn -num_threads 10 -db ~/genome_seq/zizania_palustris_genome_db -query i > ${STEM}_out.txt
+blastn -num_threads 10 -db ~/genome_seq/zizania_palustris_genome_db -query $i > ${STEM}_out.txt
 done
